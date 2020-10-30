@@ -1,25 +1,26 @@
 import Link from "next/link";
 import ThemeToggler from "../ThemeToggler/index.js";
+import styles from "./style.module.css";
 
 const Navigation = () => {
   return (
     <div className="w-2/12 flex flex-col text-2xl">
       <ThemeToggler />
       <Link href="/project/">
-        <a href="#" className=" opacity-75 hover:opacity-100 py-1 font-bold">
+        <a className={styles.link} href="#">
           #projects
         </a>
       </Link>
-      <a href="#" className=" opacity-75 hover:opacity-100 py-1 font-bold">
+      <a className={styles.link} href="#">
         #typescript
       </a>
-      <a href="#" className=" opacity-75 hover:opacity-100 py-1 font-bold">
+      <a className={styles.link} href="#">
         #patterns
       </a>
-      <a href="#" className=" opacity-75 hover:opacity-100 py-1 font-bold">
+      <a className={styles.link} href="#">
         #tools
       </a>
-      <a href="#" className=" opacity-75 hover:opacity-100 py-1 font-bold">
+      <a className={styles.link} href="#">
         #contact
       </a>
     </div>

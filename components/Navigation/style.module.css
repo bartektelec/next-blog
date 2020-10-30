@@ -1,0 +1,11 @@
+.link {
+  opacity: 0.5;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: bold;
+  color: var(--current-link);
+}
+
+.link:hover {
+  opacity: 1;
+}

@@ -1,5 +1,5 @@
 .togglerBox {
-  border: 1px solid var(--current-primary);
+  border: 2px solid var(--current-primary);
   border-radius: 2rem;
   height: 1rem;
   width: 2rem;
@@ -11,8 +11,8 @@
 
 .dot {
   background-color: var(--current-primary);
-  height: 0.75rem;
-  width: 0.75rem;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 2rem;
   transition: transform 0.4s ease;
   transform: translateX(0.5rem);

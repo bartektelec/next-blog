@@ -16,17 +16,19 @@ const ThemeToggler = () => {
       "gradient-to",
       "link",
     ].forEach((property) => {
-      document.body.style.setProperty(
-        `--current-${property}`,
-        `var(--theme-${theme}-${property})`
-      );
+      document
+        .querySelector(":root")
+        .style.setProperty(
+          `--current-${property}`,
+          `var(--theme-${theme}-${property})`
+        );
     });
   };
 
   return (
     <div
       onClick={handleToggler}
-      className="flex items-center justify-between opacity-75 hover:opacity-100 cursor-pointer"
+      className="flex items-center justify-between opacity-75 hover:opacity-100 cursor-pointer py-8"
     >
       <p className="text-sm">Dark mode</p>
       <div className={cn(styles.togglerBox)}>

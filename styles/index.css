@@ -28,7 +28,7 @@
   --theme-light-accent-link: #ebf8ff;
   --theme-light-gradient-from: #00b695;
   --theme-light-gradient-to: #005422;
-  --theme-light-link: #e6fffa;
+  --theme-light-link: #1a202c;
   --current-secondary: var(--theme-dark-secondary);
   --current-primary: var(--theme-dark-primary);
   --current-accent: var(--theme-dark-accent);
@@ -49,6 +49,11 @@ body {
 
 h1 {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.125rem;
   font-weight: bold;
 }
 

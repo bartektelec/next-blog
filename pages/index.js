@@ -7,6 +7,7 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { TITLE } from "../lib/constants";
 import Navigation from "../components/Navigation/";
+import Main from "../components/Main/";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -19,8 +20,9 @@ export default function Index({ allPosts }) {
         </Head>
         <Container>
           <Header />
-          <div className="flex">
+          <div className="flex items-baseline">
             <Navigation />
+            <Main />
           </div>
           {heroPost && (
             <HeroPost

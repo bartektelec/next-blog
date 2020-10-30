@@ -36,6 +36,9 @@
   --current-gradient-from: var(--theme-dark-gradient-from);
   --current-gradient-to: var(--theme-dark-gradient-to);
   --current-link: var(--theme-dark-link);
+  --shadow-md: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0px 4px 10px -2px rgba(0, 0, 0, 0.25);
+  --b-radius: 15px;
 }
 
 body {
@@ -47,4 +50,12 @@ body {
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.icon-fill-primary {
+  fill: var(--current-primary);
+}
+
+.link {
+  color: var(--current-link);
 }

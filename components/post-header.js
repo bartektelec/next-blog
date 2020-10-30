@@ -1,4 +1,4 @@
-import Avatar from '../components/avatar';
+import Avatar from '../components/Avatar/';
 import DateFormatter from '../components/date-formatter';
 import CoverImage from '../components/cover-image';
 import PostTitle from '../components/post-title';

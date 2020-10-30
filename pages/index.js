@@ -1,11 +1,12 @@
-import Container from '../components/container';
-import MoreStories from '../components/more-stories';
-import HeroPost from '../components/hero-post';
-import Intro from '../components/intro';
-import Layout from '../components/layout';
-import { getAllPosts } from '../lib/api';
-import Head from 'next/head';
-import { TITLE } from '../lib/constants';
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroPost from "../components/hero-post";
+import Header from "../components/Header/";
+import Layout from "../components/layout";
+import { getAllPosts } from "../lib/api";
+import Head from "next/head";
+import { TITLE } from "../lib/constants";
+import Navigation from "../components/Navigation/";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -17,7 +18,10 @@ export default function Index({ allPosts }) {
           <title>{TITLE}</title>
         </Head>
         <Container>
-          <Intro />
+          <Header />
+          <div className="flex">
+            <Navigation />
+          </div>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -36,11 +40,11 @@ export default function Index({ allPosts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'coverImage',
-    'excerpt',
+    "title",
+    "date",
+    "slug",
+    "coverImage",
+    "excerpt",
   ]);
 
   return {

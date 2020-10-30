@@ -1,0 +1,7 @@
+.iconFillPrimary {
+  fill: var(--current-primary);
+}
+
+.hamburger {
+  fill: var(--current-link);
+}

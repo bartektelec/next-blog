@@ -1,0 +1,23 @@
+.togglerBox {
+  border: 1px solid var(--current-primary);
+  border-radius: 2rem;
+  height: 1rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+}
+
+.dot {
+  background-color: var(--current-primary);
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 2rem;
+  transition: transform 0.4s ease;
+  transform: translateX(0.5rem);
+}
+
+.dotActive {
+  transform: translateX(-0.5rem);
+}

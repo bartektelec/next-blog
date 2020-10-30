@@ -1,0 +1,39 @@
+import { useState } from "react";
+import cn from "classnames";
+import styles from "./style.module.css";
+
+const ThemeToggler = () => {
+  const [isLight, toggleLight] = useState(false);
+  const handleToggler = () => {
+    const theme = isLight ? "dark" : "light";
+    const a = toggleLight(!isLight);
+    [
+      "secondary",
+      "primary",
+      "accent",
+      "accent-link",
+      "gradient-from",
+      "gradient-to",
+      "link",
+    ].forEach((property) => {
+      document.body.style.setProperty(
+        `--current-${property}`,
+        `var(--theme-${theme}-${property})`
+      );
+    });
+  };
+
+  return (
+    <div
+      onClick={handleToggler}
+      className="flex items-center justify-between opacity-75 hover:opacity-100 cursor-pointer"
+    >
+      <p className="text-sm">Dark mode</p>
+      <div className={cn(styles.togglerBox)}>
+        <div className={`${styles.dot} ${isLight && styles.dotActive}`}></div>
+      </div>
+    </div>
+  );
+};
+
+export default ThemeToggler;

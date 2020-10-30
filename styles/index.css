@@ -13,3 +13,38 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+:root {
+  --theme-dark-secondary: #1a202c;
+  --theme-dark-primary: #f7fafc;
+  --theme-dark-accent: #dd6b20;
+  --theme-dark-accent-link: #fffaf0;
+  --theme-dark-gradient-from: #2c6d82;
+  --theme-dark-gradient-to: #2c3f82;
+  --theme-dark-link: #bee3f8;
+  --theme-light-secondary: #f7fafc;
+  --theme-light-primary: #1a202c;
+  --theme-light-accent: #2c5282;
+  --theme-light-accent-link: #ebf8ff;
+  --theme-light-gradient-from: #00b695;
+  --theme-light-gradient-to: #005422;
+  --theme-light-link: #e6fffa;
+  --current-secondary: var(--theme-dark-secondary);
+  --current-primary: var(--theme-dark-primary);
+  --current-accent: var(--theme-dark-accent);
+  --current-accent-link: var(--theme-dark-accent-link);
+  --current-gradient-from: var(--theme-dark-gradient-from);
+  --current-gradient-to: var(--theme-dark-gradient-to);
+  --current-link: var(--theme-dark-link);
+}
+
+body {
+  background-color: var(--current-secondary);
+  color: var(--current-primary);
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

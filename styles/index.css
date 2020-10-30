@@ -13,24 +13,30 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 :root {
   --theme-dark-secondary: #1a202c;
-  --theme-dark-primary: #f7fafc;
+  --theme-dark-primary: #f9f9f9;
+  --theme-dark-text-secondary: #1a202c;
+  --theme-dark-text-primary: #f2f5f8;
   --theme-dark-accent: #dd6b20;
   --theme-dark-accent-link: #fffaf0;
   --theme-dark-gradient-from: #2c6d82;
   --theme-dark-gradient-to: #2c3f82;
   --theme-dark-link: #bee3f8;
-  --theme-light-secondary: #f7fafc;
+  --theme-light-secondary: #f2f5f8;
   --theme-light-primary: #1a202c;
+  --theme-light-text-secondary: #1a202c;
+  --theme-light-text-primary: #fbfbfb;
   --theme-light-accent: #2c5282;
   --theme-light-accent-link: #ebf8ff;
-  --theme-light-gradient-from: #00b695;
-  --theme-light-gradient-to: #005422;
+  --theme-light-gradient-from: #e1f3ff;
+  --theme-light-gradient-to: #9ad7ff;
   --theme-light-link: #1a202c;
   --current-secondary: var(--theme-dark-secondary);
   --current-primary: var(--theme-dark-primary);
+  --current-text-secondary: var(--theme-dark-text-secondary);
+  --current-text-primary: var(--theme-dark-text-primary);
   --current-accent: var(--theme-dark-accent);
   --current-accent-link: var(--theme-dark-accent-link);
   --current-gradient-from: var(--theme-dark-gradient-from);
@@ -44,7 +50,7 @@
 body {
   background-color: var(--current-secondary);
   color: var(--current-primary);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {

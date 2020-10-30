@@ -1,4 +1,6 @@
-import styles from "./style.module.css";
+import BookIcon from '../Icons/Book';
+
+import styles from './style.module.css';
 
 const Card = ({ image, date, title, excerpt, slug, full }) => {
   return (
@@ -15,6 +17,9 @@ const Card = ({ image, date, title, excerpt, slug, full }) => {
           the constructor cluttered and difficult to read...
         </p>
       </div>
+      <button className={styles.btn}>
+        <BookIcon className={styles.icon} />
+      </button>
     </div>
   );
 };

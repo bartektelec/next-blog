@@ -1,5 +1,6 @@
 .container {
-  color: var(--current-secondary);
+  position: relative;
+  color: var(--current-text-secondary);
   display: flex;
   flex-direction: column;
   border-radius: var(--b-radius);
@@ -15,7 +16,7 @@
 .body {
   min-height: 50%;
   padding: 0.75rem 1.5rem;
-  background-color: var(--current-primary);
+  background-color: var(--current-text-primary);
 }
 
 .date {
@@ -32,4 +33,36 @@
   max-width: 50ch;
   line-height: 1.5;
   font-weight: lighter;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-image: linear-gradient(
+    135deg,
+    var(--current-gradient-from),
+    var(--current-gradient-to)
+  );
+  border-radius: var(--b-radius);
+  right: 0.5rem;
+  top: calc(50% - 2rem);
+  filter: grayscale(80%);
+  box-shadow: var(--shadow-lg);
+  transition: filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: var(--shadow-md);
+  filter: grayscale(0);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--current-link);
 }

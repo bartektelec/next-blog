@@ -23,3 +23,15 @@
   grid-column: span 4;
   grid-row: span 1;
 }
+
+.container {
+  width: 66.666%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}

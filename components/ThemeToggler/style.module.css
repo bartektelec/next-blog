@@ -21,3 +21,13 @@
 .dotActive {
   transform: translateX(-0.5rem);
 }
+
+@media (max-width: 768px) {
+  .togglerBox {
+    border-color: var(--current-text-secondary);
+  }
+
+  .dot {
+    background-color: var(--current-text-secondary);
+  }
+}

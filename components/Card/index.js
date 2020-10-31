@@ -1,15 +1,18 @@
-import BookIcon from '../Icons/Book';
-import Link from 'next/link';
+import BookIcon from "../Icons/Book";
+import Link from "next/link";
 
-import styles from './style.module.css';
+import styles from "./style.module.css";
 
 const Card = ({ image, date, title, excerpt, slug, full }) => {
   return (
     <Link href={`/posts/${slug}`}>
       <a>
         <div className={styles.container}>
-          <div className={styles.head}>
-            <img src={image} alt={title} />
+          <div
+            className={styles.head}
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <p className="sr-only">picture of {title}</p>
           </div>
           <div className={styles.body}>
             <p className={styles.date}>October 20, 2020</p>
@@ -20,9 +23,6 @@ const Card = ({ image, date, title, excerpt, slug, full }) => {
               makes the constructor cluttered and difficult to read...
             </p>
           </div>
-          <button className={styles.btn}>
-            <BookIcon className={styles.icon} />
-          </button>
         </div>
       </a>
     </Link>

@@ -1,12 +1,13 @@
-import Card from '../Card/';
-import styles from './style.module.css';
+import Card from "../Card/";
+import styles from "./style.module.css";
 const Main = ({ posts }) => {
   return (
-    <div className='w-8/12 mx-auto'>
-      <h1 className='py-8'>Posts</h1>
+    <div className="w-8/12 mx-auto">
+      <h1 className="py-8">Posts</h1>
       <div className={styles.grid}>
         {posts.map(({ title, slug, date, excerpt, coverImage }) => (
           <Card
+            key={slug}
             title={title}
             excerpt={excerpt}
             slug={slug}

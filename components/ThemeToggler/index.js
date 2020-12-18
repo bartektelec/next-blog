@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import cn from 'classnames';
 import styles from './style.module.css';
 
 const ThemeToggler = () => {
-  const [isLight, toggleLight] = useState(false);
-  const handleToggler = () => {
+  const [isLight, setLight] = useState(false);
+  const handleThemeToggle = useCallback(() => {
+    setLight(!isLight);
+  });
+  const handleThemeApply = useCallback(() => {
     const theme = isLight ? 'dark' : 'light';
-    toggleLight(!isLight);
     [
       'secondary',
       'text-primary',
@@ -25,11 +27,26 @@ const ThemeToggler = () => {
           `var(--theme-${theme}-${property})`
         );
     });
-  };
+  });
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const memoTheme = localStorage.getItem('light-theme');
+      const currentTheme = memoTheme ? JSON.parse(memoTheme) : false;
+      setLight(currentTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      localStorage.setItem('light-theme', JSON.stringify(isLight));
+    }
+    handleThemeApply();
+  }, [isLight]);
 
   return (
     <div
-      onClick={handleToggler}
+      onClick={handleThemeToggle}
       className='flex items-center justify-between opacity-75 hover:opacity-100 cursor-pointer py-8'
     >
       <p className='text-sm font-bold'>Dark mode</p>

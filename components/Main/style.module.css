@@ -35,3 +35,16 @@
     width: 100%;
   }
 }
+@media (max-width: 567px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid > * {
+    grid-column: span 4;
+  }
+
+  .grid > *:nth-child(2) {
+    grid-column: span 4;
+  }
+}

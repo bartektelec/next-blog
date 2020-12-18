@@ -51,7 +51,9 @@ body {
   background-color: var(--current-secondary);
   color: var(--current-primary);
   font-family: 'Roboto', sans-serif;
-  transition: background 0.4s ease;
+  transition-property: background, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
 }
 
 h1 {

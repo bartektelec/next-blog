@@ -11,7 +11,7 @@ import markdownToHtml from '../../lib/markdownToHtml';
 import Header from '../../components/Header/';
 import Layout from '../../components/layout';
 import Navigation from '../../components/Navigation/';
-import Main from '../../components/Main/';
+import Article from '../../components/Article/';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
           <Header />
           <div className='flex items-baseline'>
             <Navigation />
-            <Main posts={[post]} />
+            <Article {...post} />
           </div>
         </Container>
       </Layout>

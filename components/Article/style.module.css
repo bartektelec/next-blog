@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  gap: 2rem 1.25rem;
+  grid-template-columns: 30rem / 1fr;
+}
+
+.container {
+  width: 66.666%;
+  margin-left: auto;
+  margin-right: auto;
+}

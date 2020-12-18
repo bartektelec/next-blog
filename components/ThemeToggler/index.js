@@ -3,12 +3,12 @@ import cn from 'classnames';
 import styles from './style.module.css';
 
 const ThemeToggler = () => {
-  const [isLight, setLight] = useState(false);
+  const [isDark, setDark] = useState(false);
   const handleThemeToggle = useCallback(() => {
-    setLight(!isLight);
+    setDark(!isDark);
   });
   const handleThemeApply = useCallback(() => {
-    const theme = isLight ? 'dark' : 'light';
+    const theme = isDark ? 'dark' : 'light';
     [
       'secondary',
       'text-primary',
@@ -31,18 +31,18 @@ const ThemeToggler = () => {
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      const memoTheme = localStorage.getItem('light-theme');
+      const memoTheme = localStorage.getItem('dark-theme');
       const currentTheme = memoTheme ? JSON.parse(memoTheme) : false;
-      setLight(currentTheme);
+      setDark(currentTheme);
     }
   }, []);
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      localStorage.setItem('light-theme', JSON.stringify(isLight));
+      localStorage.setItem('dark-theme', JSON.stringify(isDark));
     }
     handleThemeApply();
-  }, [isLight]);
+  }, [isDark]);
 
   return (
     <div
@@ -51,7 +51,7 @@ const ThemeToggler = () => {
     >
       <p className='text-sm font-bold'>Dark mode</p>
       <div className={cn(styles.togglerBox)}>
-        <div className={`${styles.dot} ${isLight && styles.dotActive}`}></div>
+        <div className={`${styles.dot} ${!isDark && styles.dotActive}`}></div>
       </div>
     </div>
   );

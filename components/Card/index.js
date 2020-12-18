@@ -42,10 +42,10 @@ const Card = ({ image, date, title, excerpt, slug, content, full }) => {
             <p className={styles.date}>{date}</p>
             <h2 className={styles.titleBig}>{title}</h2>
 
-            <p
+            <div
               className={styles.text}
               dangerouslySetInnerHTML={{ __html: content }}
-            ></p>
+            ></div>
           </div>
         </div>
       </div>

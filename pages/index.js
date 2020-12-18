@@ -10,18 +10,7 @@ import Main from '../components/Main/';
 export default function Index({ allPosts }) {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>{TITLE}</title>
-        </Head>
-        <Container>
-          <Header />
-          <div className='flex items-baseline'>
-            <Navigation />
-            <Main posts={allPosts} />
-          </div>
-        </Container>
-      </Layout>
+      <Main posts={allPosts} />
     </>
   );
 }

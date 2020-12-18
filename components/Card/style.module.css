@@ -84,7 +84,20 @@
 .text h4 {
   font-size: 1.125rem;
 }
-.text > pre {
+.text a {
+  border-radius: 4px;
+  color: var(--current-accent);
+  opacity: 0.8;
+  padding: 0.5rem;
+  display: inline-block;
+  margin: 0.25rem;
+}
+.text a:hover,
+.text a:focus,
+.text a:active {
+  opacity: 1;
+}
+.text pre {
   margin: 2rem 0.5rem;
   padding: 1rem;
   font-size: 0.75rem;

@@ -1,16 +1,7 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../../components/container';
-import PostBody from '../../components/post-body';
-import PostHeader from '../../components/post-header';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
-import PostTitle from '../../components/post-title';
-import Head from 'next/head';
-import { TITLE } from '../../lib/constants';
 import markdownToHtml from '../../lib/markdownToHtml';
-import Header from '../../components/Header/';
-import Layout from '../../components/layout';
-import Navigation from '../../components/Navigation/';
 import Article from '../../components/Article/';
 
 export default function Post({ post, morePosts, preview }) {
@@ -20,18 +11,7 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <>
-      <Layout>
-        <Head>
-          <title>{TITLE}</title>
-        </Head>
-        <Container>
-          <Header />
-          <div className='flex items-baseline'>
-            <Navigation />
-            <Article {...post} />
-          </div>
-        </Container>
-      </Layout>
+      <Article {...post} />
     </>
   );
 }

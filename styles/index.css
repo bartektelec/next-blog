@@ -66,6 +66,17 @@ h2 {
   font-weight: bold;
 }
 
+.link {
+  color: var(--current-accent);
+  opacity: 0.75;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  opacity: 1;
+}
+
 .icon-fill-primary {
   fill: var(--current-primary);
 }

@@ -2,7 +2,7 @@ import Card from '../Card';
 import Link from 'next/link';
 import BackIcon from '../Icons/Back';
 import styles from './style.module.css';
-const Article = ({ title, slug, date, content, coverImage }) => {
+const Article = ({ title, slug, date, content, coverImage, tags }) => {
   return (
     <div className={styles.container}>
       <div className='py-8'>
@@ -20,6 +20,7 @@ const Article = ({ title, slug, date, content, coverImage }) => {
           content={content}
           slug={slug}
           date={date}
+          tags={tags}
           image={coverImage}
           full
         />

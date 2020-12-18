@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import styles from './style.module.css';
 
-const Card = ({ image, date, title, excerpt, slug, content, full }) => {
+const Card = ({ image, date, title, excerpt, slug, content, tags, full }) => {
   if (!content) {
     return (
       <Link href={`/posts/${slug}`}>
@@ -41,7 +41,7 @@ const Card = ({ image, date, title, excerpt, slug, content, full }) => {
           <div className={styles.bodyLong}>
             <p className={styles.date}>{date}</p>
             <h2 className={styles.titleBig}>{title}</h2>
-
+            <p className='italic text-sm font-light'>{tags}</p>
             <div
               className={styles.text}
               dangerouslySetInnerHTML={{ __html: content }}

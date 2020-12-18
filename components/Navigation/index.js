@@ -18,23 +18,21 @@ const Navigation = () => {
           <Link href='/'>
             <a className={styles.link}>#home</a>
           </Link>
-          <Link href='/project/'>
-            <a className={styles.link} href='#'>
-              #projects
-            </a>
+          <Link href='/tag/project'>
+            <a className={styles.link}>#projects</a>
           </Link>
-          <a className={styles.link} href='#'>
-            #typescript
-          </a>
-          <a className={styles.link} href='#'>
-            #patterns
-          </a>
-          <a className={styles.link} href='#'>
-            #tools
-          </a>
-          <a className={styles.link} href='#'>
-            #contact
-          </a>
+          <Link href='/tag/typescript'>
+            <a className={styles.link}>#typescript</a>
+          </Link>
+          <Link href='/tag/patterns'>
+            <a className={styles.link}>#patterns</a>
+          </Link>
+          <Link href='/tag/tools'>
+            <a className={styles.link}>#tools</a>
+          </Link>
+          <Link href='/contact'>
+            <a className={styles.link}>#contact</a>
+          </Link>
         </div>
       </div>
       <button onClick={triggerHamburger} className={styles.btn}>

@@ -1,5 +1,3 @@
-import BookIcon from '../Icons/Book';
-import cn from 'classnames';
 import Link from 'next/link';
 
 import styles from './style.module.css';

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import MenuIcon from '../Icons/Menu';
 import ThemeToggler from '../ThemeToggler/index.js';
 import styles from './style.module.css';
-import cn from 'classnames';
 
 const Navigation = () => {
   const [isOpen, setOpen] = useState(false);

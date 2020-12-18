@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Main from '../../components/Main';
 import { getAllPosts } from '../../lib/api';
 
-export default function MatchingPosts({ posts, tagname }) {
+export default function MatchingPosts({ posts }) {
   const router = useRouter();
   if (!router.isFallback && !posts) {
     return <ErrorPage statusCode={404} />;

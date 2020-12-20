@@ -41,10 +41,10 @@
   }
 
   .grid > * {
-    grid-column: span 4;
+    grid-column: span 5;
   }
 
   .grid > *:nth-child(2) {
-    grid-column: span 4;
+    grid-column: span 5;
   }
 }

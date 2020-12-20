@@ -32,11 +32,27 @@ export default function Meta() {
       <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
       <meta name='theme-color' content='#000' />
       <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+      <meta name='description' content={TITLE} />
       <meta
-        name='description'
+        prefix='og: http://ogp.me/ns#'
+        property='og:title'
         content={TITLE}
       />
-      <meta property='og:image' content={HOME_OG_IMAGE_URL} />
+      <meta
+        prefix='og: http://ogp.me/ns#'
+        property='og:type'
+        content='website'
+      />
+      <meta
+        prefix='og: http://ogp.me/ns#'
+        property='og:image'
+        content={HOME_OG_IMAGE_URL}
+      />
+      <meta
+        prefix='og: http://ogp.me/ns#'
+        property='og:url'
+        content='https://next-blog-sable.vercel.app/'
+      />
     </Head>
   );
 }

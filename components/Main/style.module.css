@@ -2,7 +2,7 @@
   display: grid;
   gap: 2rem 1.25rem;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(64px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(64px, 1fr));
 }
 
 .grid > *:first-child {
@@ -14,9 +14,8 @@
   grid-column: -4 / -1;
 }
 
-.grid > *:nth-child(n + 3) p:last-child,
-.grid > *:nth-child(n + 3) > div:first-child {
-  display: none;
+.grid > *:nth-child(n + 3),
+.grid > *:nth-child(n + 3) {
 }
 
 .grid > *:nth-child(n + 3) {

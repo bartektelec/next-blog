@@ -102,6 +102,9 @@
 .text a:active {
   opacity: 1;
 }
+.text img {
+  margin: 1rem 0;
+}
 .text pre {
   margin: 2rem 0.5rem;
   padding: 1rem;
